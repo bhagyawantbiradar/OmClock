@@ -1,4 +1,4 @@
-package com.ast.clock;
+package com.ast.clock.services;
 
 import android.app.IntentService;
 import android.app.NotificationManager;
@@ -6,6 +6,10 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.NotificationCompat;
+
+import com.ast.clock.activities.AlarmTriggeredActivity;
+import com.ast.clock.utitilies.ForegroundCheckTask;
+import com.ast.clock.R;
 
 import java.util.concurrent.ExecutionException;
 

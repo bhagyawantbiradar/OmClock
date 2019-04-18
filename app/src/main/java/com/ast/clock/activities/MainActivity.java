@@ -1,5 +1,7 @@
-package com.ast.clock;
+package com.ast.clock.activities;
 
+import android.app.AlarmManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -9,12 +11,19 @@ import android.os.PowerManager;
 import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.ast.clock.utitilies.Constants;
+import com.ast.clock.utitilies.MyAnalogClock;
+import com.ast.clock.R;
+import com.ast.clock.utitilies.StoredData;
+import com.ast.clock.receivers.services.AlarmReceiver;
 
 import java.util.Calendar;
 
@@ -26,6 +35,7 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
+    private static final String TAG = "MainActivity";
     @BindView(R.id.iv_info)
     ImageView ivInfo;
     @BindView(R.id.iv_share)
@@ -49,12 +59,14 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.vector_analog_clock)
     MyAnalogClock vectorAnalogClock;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         initSettings();
+
 
     }
 
@@ -65,8 +77,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initializeClockWithBells(boolean isWithBell) {
-        Toast.makeText(this, "Called", Toast.LENGTH_SHORT).show();
         Calendar currentTimeCalendar = Calendar.getInstance();
+        Toast.makeText(this, "Called", Toast.LENGTH_SHORT).show();
         vectorAnalogClock.setCalendar(currentTimeCalendar)
                 .setOpacity(1.0f)
                 .setShowSeconds(true)
@@ -107,8 +119,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void setAlarm() {
         Calendar calendar = Calendar.getInstance();
-        calendar.get(Calendar.HOUR_OF_DAY);
+        calendar.set(Calendar.HOUR_OF_DAY,calendar.get(Calendar.HOUR_OF_DAY)+1);
+        calendar.set(Calendar.MINUTE,0);
+        calendar.set(Calendar.SECOND,0);
 
+        Log.d(TAG, "setAlarm: "+calendar.getTimeInMillis());
+
+        Intent intentAlarmReciever = new Intent(this, AlarmReceiver.class);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(this, Constants.NOTIFY_ID, intentAlarmReciever, PendingIntent.FLAG_UPDATE_CURRENT);
+        AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+        alarmManager.setInexactRepeating(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), AlarmManager.INTERVAL_HOUR, pendingIntent);
 
         Constants.isForceStopped = false;
     }

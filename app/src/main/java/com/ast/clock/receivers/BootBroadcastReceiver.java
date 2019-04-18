@@ -1,4 +1,4 @@
-package com.ast.clock;
+package com.ast.clock.receivers;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

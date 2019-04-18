@@ -1,7 +1,9 @@
-package com.ast.clock;
+package com.ast.clock.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+
+import com.ast.clock.R;
 
 public class AlarmTriggeredActivity extends AppCompatActivity {
 

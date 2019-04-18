@@ -16,17 +16,14 @@
         tools:ignore="GoogleAppIndexingWarning"
         tools:replace="android:appComponentFactory">
         <activity
-            android:name=".AlarmTriggeredActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name=".SettingsActivity"
+            android:name=".activities.AlarmTriggeredActivity"
             android:screenOrientation="portrait" />
 
         <receiver
-            android:name=".AlarmReceiver"
+            android:name=".receivers.AlarmReceiver"
             android:process=":remote" />
         <receiver
-            android:name=".BootBroadcastReceiver"
+            android:name=".receivers.BootBroadcastReceiver"
             android:enabled="true"
             android:process=":remote">
             <intent-filter>
@@ -35,11 +32,11 @@
         </receiver>
 
         <service
-            android:name=".AlarmService"
+            android:name=".services.AlarmService"
             android:enabled="true" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

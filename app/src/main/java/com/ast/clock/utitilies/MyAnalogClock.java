@@ -1,4 +1,4 @@
-package com.ast.clock;
+package com.ast.clock.utitilies;
 
 import android.content.Context;
 import android.os.Build;
