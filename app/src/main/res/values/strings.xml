@@ -5,4 +5,11 @@
     <string name="bell_settings">Bell Settings</string>
     <string name="bell_ringing_on_off">Bell Ringing On/Off</string>
     <string name="what_to_do_with_reminder">What to do with reminder</string>
+    <string name="mon">Monday</string>
+    <string name="tue">Tuesday</string>
+    <string name="wed">Wednesday</string>
+    <string name="thu">Thursday</string>
+    <string name="fri">Friday</string>
+    <string name="sat">Saturday</string>
+    <string name="sun">Sunday</string>
 </resources>

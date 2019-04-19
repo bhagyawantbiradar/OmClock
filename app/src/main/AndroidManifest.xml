@@ -19,14 +19,7 @@
         tools:replace="android:appComponentFactory">
         <activity
             android:name=".activities.AlarmTriggeredActivity"
-            android:screenOrientation="portrait" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
-        </activity>
+            android:screenOrientation="portrait"/>
 
         <receiver
             android:name=".receivers.AlarmReceiver"
@@ -47,7 +40,11 @@
         <activity
             android:name=".activities.MainActivity"
             android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

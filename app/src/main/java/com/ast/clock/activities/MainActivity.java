@@ -1,8 +1,10 @@
 package com.ast.clock.activities;
 
 import android.app.AlarmManager;
+import android.app.AlertDialog;
 import android.app.PendingIntent;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
@@ -77,11 +79,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initializeClockWithBells(boolean isWithBell) {
+        if(isWithBell)
+        vectorAnalogClock.initializeCustom(R.drawable.ic_face_selected,R.drawable.hours_hand,R.drawable.minutes_hand,R.drawable.second_hand);
+        else vectorAnalogClock.initializeCustom(R.drawable.ic_face_unselected,R.drawable.hours_hand,R.drawable.minutes_hand,R.drawable.second_hand);
         Calendar currentTimeCalendar = Calendar.getInstance();
-        Toast.makeText(this, "Called", Toast.LENGTH_SHORT).show();
         vectorAnalogClock.setCalendar(currentTimeCalendar)
                 .setOpacity(1.0f)
-                .setShowSeconds(true)
+                .setShowSeconds(false)
                 .setColor(Color.WHITE);
     }
 
@@ -107,8 +111,17 @@ public class MainActivity extends AppCompatActivity {
 
     private void showDialogToOptOutFromBatteryOptimization() {
 
-        //TODO Dialog to be shown here.
-
+        final AlertDialog alertDialog  = new AlertDialog.Builder(this)
+                .setTitle("Allow permission")
+                .setMessage("Please enable battery optimization permission.")
+                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                        openBatteryOptimization();
+                        dialog.dismiss();
+                    }
+                })
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
     }
 
     private void openBatteryOptimization() {

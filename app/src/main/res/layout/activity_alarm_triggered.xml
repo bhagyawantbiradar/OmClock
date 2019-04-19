@@ -9,12 +9,12 @@
 
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/iv_om_or_bell"
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:background="@drawable/ic_pattern"
         android:padding="100dp"
-        android:src="@drawable/ic_om"
+        android:src="@drawable/ic_bell"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.517"
@@ -30,16 +30,16 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
         android:gravity="center"
-        android:text="12:000 PM"
+        android:text="12:00 PM"
         android:textColor="@color/white"
         android:textSize="32sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+        app:layout_constraintTop_toBottomOf="@+id/iv_om_or_bell" />
 
     <TextView
-        android:id="@+id/textView7"
+        android:id="@+id/tv_date"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -65,7 +65,7 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView7" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_date" />
 
     <ImageView
         android:id="@+id/iv_minus"
@@ -91,7 +91,7 @@
         android:id="@+id/sb_volume"
         style="@style/MySeekBar"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="21dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:max="10"
