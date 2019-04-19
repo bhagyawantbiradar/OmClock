@@ -14,7 +14,7 @@ public class StringDateTime {
 
     public static String getDateInString(long millis, Context context) {
         SimpleDateFormat dateFormat;
-        String df = "d-MMM-yyyy";
+        String df = "dd MMMM";
         dateFormat = new SimpleDateFormat(df, GlobalMethods.getCurrentLocale(context));
         Calendar calendar = Calendar.getInstance();
         calendar.setTimeInMillis(millis);
