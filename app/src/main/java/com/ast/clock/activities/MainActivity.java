@@ -23,7 +23,7 @@ import com.ast.clock.utitilies.Constants;
 import com.ast.clock.utitilies.MyAnalogClock;
 import com.ast.clock.R;
 import com.ast.clock.utitilies.StoredData;
-import com.ast.clock.receivers.services.AlarmReceiver;
+import com.ast.clock.receivers.AlarmReceiver;
 
 import java.util.Calendar;
 
