@@ -79,9 +79,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initializeClockWithBells(boolean isWithBell) {
-        if(isWithBell)
-        vectorAnalogClock.initializeCustom(R.drawable.ic_face_selected,R.drawable.hours_hand,R.drawable.minutes_hand,R.drawable.second_hand);
-        else vectorAnalogClock.initializeCustom(R.drawable.ic_face_unselected,R.drawable.hours_hand,R.drawable.minutes_hand,R.drawable.second_hand);
+        if (isWithBell)
+            vectorAnalogClock.initializeCustom(R.drawable.ic_face_selected, R.drawable.hours_hand, R.drawable.minutes_hand, R.drawable.second_hand);
+        else
+            vectorAnalogClock.initializeCustom(R.drawable.ic_face_unselected, R.drawable.hours_hand, R.drawable.minutes_hand, R.drawable.second_hand);
         Calendar currentTimeCalendar = Calendar.getInstance();
         vectorAnalogClock.setCalendar(currentTimeCalendar)
                 .setOpacity(1.0f)
@@ -111,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void showDialogToOptOutFromBatteryOptimization() {
 
-        final AlertDialog alertDialog  = new AlertDialog.Builder(this)
+        final AlertDialog alertDialog = new AlertDialog.Builder(this)
                 .setTitle("Allow permission")
                 .setMessage("Please enable battery optimization permission.")
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
@@ -122,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
                 })
                 .setIcon(android.R.drawable.ic_dialog_alert)
                 .show();
+        alertDialog.setCancelable(false);
     }
 
     private void openBatteryOptimization() {
@@ -132,11 +134,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void setAlarm() {
         Calendar calendar = Calendar.getInstance();
-        calendar.set(Calendar.HOUR_OF_DAY,calendar.get(Calendar.HOUR_OF_DAY)+1);
-        calendar.set(Calendar.MINUTE,0);
-        calendar.set(Calendar.SECOND,0);
+        calendar.set(Calendar.HOUR_OF_DAY, calendar.get(Calendar.HOUR_OF_DAY) + 1);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
 
-        Log.d(TAG, "setAlarm: "+calendar.getTimeInMillis());
+        Log.d(TAG, "setAlarm: " + calendar.getTimeInMillis());
 
         Intent intentAlarmReciever = new Intent(this, AlarmReceiver.class);
         PendingIntent pendingIntent = PendingIntent.getBroadcast(this, Constants.NOTIFY_ID, intentAlarmReciever, PendingIntent.FLAG_UPDATE_CURRENT);
@@ -161,6 +163,9 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.iv_plus:
                 changeVolume(true);
+                break;
+            case R.id.iv_info:
+                startActivity(new Intent(this,InfoActivity.class));
                 break;
         }
 

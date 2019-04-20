@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activities.InfoActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/aum_seva_trust_prayer_manager"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_back" />
+
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_clock"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_share"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_share_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="50dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+
+            <TextView
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"
+                android:text="@string/aum_seva_ka_lakshya"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_bullet"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp" />
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/background_main"
+                    android:text="Mandir me Aum sound system set, mic donate Karna."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_bullet"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp" />
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/background_main"
+                    android:text="Gaaon mein peene ke paani ka borewell donate karna."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_bullet"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp" />
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/background_main"
+                    android:text="Government hospital, school aur mandir mein paani ki filter machine donate karna."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_bullet"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp" />
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/background_main"
+                    android:text="Vruddh ashram mein rehne wale ko hur suvidha pardaan karna."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/ic_bullet"
+                    android:layout_width="14dp"
+                    android:layout_height="14dp" />
+
+                <TextView
+                    android:layout_marginLeft="5dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/background_main"
+                    android:text="Aum ka mandir Nirman karna."
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:text="Contact Details"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_marginTop="5dp"
+                android:text="Aum Seva Trust"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:textSize="16dp"
+                android:layout_marginTop="2dp"
+                android:text="1841, Herms Shopping Centre No. 4"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textSize="16dp"
+                android:layout_marginTop="2dp"
+                android:text="Near Babajan Chowk Camp, Pune"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="16dp"
+                android:layout_marginTop="2dp"
+                android:text="Reg. no : 7889/Pune"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="16dp"
+                android:layout_marginTop="2dp"
+                android:text="Contact : 020-26346117"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="16dp"
+                android:layout_marginTop="2dp"
+                android:text="Email ID : aumsevatrustpune@gmail.com"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:text="For Donation"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="16dp"
+                android:layout_marginTop="2dp"
+                android:text="Account Holder Name : Aum Seva Trust"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="16dp"
+                android:layout_marginTop="2dp"
+                android:text="Account No. : 338205000005"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="16dp"
+                android:layout_marginTop="2dp"
+                android:text="IFSC : ICIC0003382"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:text="Sponsor"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/sponsored_by_das_gems_amp_company"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="16dp"
+                android:layout_marginTop="2dp"
+                android:text="1841, Herms Shopping Centre No. 4"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:textSize="16dp"
+                android:layout_marginTop="2dp"
+                android:text="Near Babajan Chowk Camp, Pune"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="16dp"
+                android:layout_marginTop="2dp"
+                android:text="Contact : 020-26346117"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_marginBottom="16dp"
+                android:textSize="16dp"
+                android:layout_marginTop="2dp"
+                android:text="Website : www.dasgemspune.com"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>

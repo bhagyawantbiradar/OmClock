@@ -58,19 +58,53 @@ public class AlarmTriggeredActivity extends AppCompatActivity {
         sbVolume.setProgress(StoredData.getInt(this, Constants.PREF_VOLUME, 50));
 
         switch (hourOfTheDay) {
+            case 13:
+                playAudio("13_clk.mp3");
+                break;
+            case 14:
+                playAudio("14_clk.mp3");
+                break;
+            case 15:
+                playAudio("15_clk.mp3");
+                break;
+            case 16:
+                playAudio("16_clk.mp3");
+                break;
+            case 8:
+            case 20:
+                playAudio("8_20_clk.mp3");
+                break;
+            case 9:
+            case 21:
+                playAudio("9_21_clk.mp3");
+                break;
+            case 10:
+                playAudio("10_clk.mp3");
+            case 11:
+                playAudio("11_clk.mp3");
+                break;
             case 12:
+                ivOmOrBell.setImageResource(R.drawable.ic_om);
+                playAudio("12_aum.mp3");
+                break;
             case 5:
-            case 6:
-            case 7:
             case 17:
+                ivOmOrBell.setImageResource(R.drawable.ic_om);
+                playAudio("5_17_aum.mp3");
+                break;
+            case 6:
             case 18:
+                ivOmOrBell.setImageResource(R.drawable.ic_om);
+                playAudio("6_18_aum.mp3");
+                break;
+            case 7:
+                ivOmOrBell.setImageResource(R.drawable.ic_om);
+                playAudio("7_aum.mp3");
+                break;
+
             case 19:
                 ivOmOrBell.setImageResource(R.drawable.ic_om);
-                playAudio("aum.mp3");
-                break;
-            default:
-                ivOmOrBell.setImageResource(R.drawable.ic_om);
-                playAudio("aum.mp3");
+                playAudio("19_aum.mp3");
                 break;
         }
 
