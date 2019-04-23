@@ -15,4 +15,26 @@
         <item name="android:height">5dp</item>
     </style>
 
+    <style name="SCBSwitch">
+        <item name="android:colorControlActivated">#84247a</item>
+        <item name="android:colorButtonNormal">#bd89b9</item>
+        <item name="android:colorForeground">#bd89b9</item>
+    </style>
+
+    <style name="Theme.MyTheme" parent="Theme.AppCompat.Light">
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">#84247a</item>
+
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">#84247a</item>
+
+        <!-- colorAccent is used as the default value for colorControlActivated,
+             which is used to tint widgets -->
+        <item name="colorAccent">#84247a</item>
+
+        <!-- You can also set colorControlNormal, colorControlActivated
+             colorControlHighlight, and colorSwitchThumbNormal. -->
+
+    </style>
+
 </resources>

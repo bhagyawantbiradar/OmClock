@@ -45,9 +45,9 @@
         android:id="@+id/view"
         android:layout_width="0dp"
         android:layout_height="3dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="50dp"
         android:background="@color/black"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintHorizontal_bias="1.0"
@@ -82,7 +82,7 @@
                 android:layout_height="wrap_content" />
 
             <LinearLayout
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="12dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -97,23 +97,23 @@
                     android:layout_marginLeft="5dp"
                     android:textSize="16dp"
                     android:textColor="@color/background_main"
-                    android:text="Mandir me Aum sound system set, mic donate Karna."
+                    android:text="Mandir me Aum sound prarthana system set, mic donate Karna."
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="12dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="14dp"
                     android:layout_marginTop="5dp"
-                    android:src="@drawable/ic_bullet"
-                    android:layout_width="14dp"
-                    android:layout_height="14dp" />
+                    android:src="@drawable/ic_bullet" />
 
                 <TextView
                     android:layout_marginLeft="5dp"
@@ -126,7 +126,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="12dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -148,7 +148,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="12dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -163,14 +163,14 @@
                     android:layout_marginLeft="5dp"
                     android:textSize="16dp"
                     android:textColor="@color/background_main"
-                    android:text="Vruddh ashram mein rehne wale ko hur suvidha pardaan karna."
+                    android:text="Vruddh aashram mein rehne wale ko hur suvidha pardaan karna."
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
 
             <LinearLayout
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="12dp"
                 android:orientation="horizontal"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -335,7 +335,7 @@
             <TextView
                 android:textSize="16dp"
                 android:layout_marginTop="2dp"
-                android:text="Contact : 020-26346117"
+                android:text="Contact : 9370626843"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
                 android:textColor="@color/background_main"
                 android:layout_width="match_parent"

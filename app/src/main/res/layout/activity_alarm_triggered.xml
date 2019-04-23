@@ -88,8 +88,10 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <SeekBar
+        android:progressTint="@color/colorPrimaryDark"
+        android:progressBackgroundTint="@color/colorAccent"
+        android:thumbTint="@color/colorPrimaryDark"
         android:id="@+id/sb_volume"
-        style="@style/MySeekBar"
         android:layout_width="0dp"
         android:layout_height="21dp"
         android:layout_marginStart="8dp"

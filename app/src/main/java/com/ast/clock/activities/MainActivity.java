@@ -21,6 +21,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.ast.clock.BuildConfig;
 import com.ast.clock.utitilies.Constants;
 import com.ast.clock.utitilies.MyAnalogClock;
 import com.ast.clock.R;
@@ -74,8 +75,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void initSettings() {
         sbBell.setChecked(StoredData.getBoolean(this, Constants.PREF_IS_BELL_ENABLED, false));
-        sbVolume.setProgress(StoredData.getInt(this, Constants.PREF_VOLUME, 50));
+        sbVolume.setProgress(StoredData.getInt(this, Constants.PREF_VOLUME, 100));
         initializeClockWithBells(sbBell.isChecked());
+
+
     }
 
     private void initializeClockWithBells(boolean isWithBell) {
@@ -165,7 +168,20 @@ public class MainActivity extends AppCompatActivity {
                 changeVolume(true);
                 break;
             case R.id.iv_info:
-                startActivity(new Intent(this,InfoActivity.class));
+                startActivity(new Intent(this, InfoActivity.class));
+                break;
+            case R.id.iv_share:
+                try {
+                    Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                    shareIntent.setType("text/plain");
+                    shareIntent.putExtra(Intent.EXTRA_SUBJECT, "Aum Prarthana App");
+                    String shareMessage = "\nPlease download this app for Aum Prarthana\n\n";
+                    shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID + "\n\n";
+                    shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
+                    startActivity(Intent.createChooser(shareIntent, "choose one"));
+                } catch (Exception e) {
+                    //e.toString();
+                }
                 break;
         }
 
