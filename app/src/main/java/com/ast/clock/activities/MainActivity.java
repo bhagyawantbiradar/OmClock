@@ -116,8 +116,8 @@ public class MainActivity extends AppCompatActivity {
     private void showDialogToOptOutFromBatteryOptimization() {
 
         final AlertDialog alertDialog = new AlertDialog.Builder(this)
-                .setTitle("Allow permission")
-                .setMessage("Please enable battery optimization permission.")
+                .setTitle("Battery Optimisation")
+                .setMessage("Disable battery optimisation for this app.\n\nGo to Battery Optimisation>>Aum Prarthana>>Don't Optimise")
                 .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int which) {
                         openBatteryOptimization();
