@@ -110,7 +110,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_width="wrap_content"
+                    android:layout_width="14dp"
                     android:layout_height="14dp"
                     android:layout_marginTop="5dp"
                     android:src="@drawable/ic_bullet" />
@@ -119,7 +119,7 @@
                     android:layout_marginLeft="5dp"
                     android:textSize="16dp"
                     android:textColor="@color/background_main"
-                    android:text="Gaaon mein peene ke paani ka borewell donate karna."
+                    android:text="Gaon mein peene ke paani ka borewell donate karna."
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
@@ -215,7 +215,7 @@
             <TextView
                 android:textSize="16dp"
                 android:layout_marginTop="2dp"
-                android:text="1841, Herms Shopping Centre No. 4"
+                android:text="1841, Herms Shopping Centre, Office No. 3"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
                 android:textColor="@color/background_main"
                 android:layout_width="match_parent"
@@ -223,7 +223,7 @@
             <TextView
                 android:textSize="16dp"
                 android:layout_marginTop="2dp"
-                android:text="Near Babajan Chowk Camp, Pune"
+                android:text="M.G Road, near Babajan Chowk Camp, Pune"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
                 android:textColor="@color/background_main"
                 android:layout_width="match_parent"
@@ -260,7 +260,7 @@
                 android:textSize="18dp"
                 android:textStyle="bold"
                 android:layout_marginTop="16dp"
-                android:text="For Donation"
+                android:text="You can also help us by Donating to our cause:"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
                 android:textColor="@color/background_main"
                 android:layout_width="match_parent"
@@ -307,7 +307,7 @@
                 android:textStyle="bold"
                 android:textSize="16dp"
                 android:layout_marginTop="2dp"
-                android:text="@string/sponsored_by_das_gems_amp_company"
+                android:text="DAS Gems &amp; Company"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
                 android:textColor="@color/background_main"
                 android:layout_width="match_parent"
@@ -316,7 +316,7 @@
             <TextView
                 android:textSize="16dp"
                 android:layout_marginTop="2dp"
-                android:text="1841, Herms Shopping Centre No. 4"
+                android:text="1841, Herms Shopping Centre, Shop No. 4"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
                 android:textColor="@color/background_main"
                 android:layout_width="match_parent"
@@ -326,7 +326,7 @@
             <TextView
                 android:textSize="16dp"
                 android:layout_marginTop="2dp"
-                android:text="Near Babajan Chowk Camp, Pune"
+                android:text="M.G Road, near Babajan Chowk Camp, Pune"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
                 android:textColor="@color/background_main"
                 android:layout_width="match_parent"
@@ -336,6 +336,15 @@
                 android:textSize="16dp"
                 android:layout_marginTop="2dp"
                 android:text="Contact : 9370626843"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                android:textColor="@color/background_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:textSize="16dp"
+                android:layout_marginTop="2dp"
+                android:text="Email : dasgems.co@gmail.com"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
                 android:textColor="@color/background_main"
                 android:layout_width="match_parent"
