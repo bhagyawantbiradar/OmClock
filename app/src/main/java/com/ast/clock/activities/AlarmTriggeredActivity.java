@@ -79,6 +79,7 @@ public class AlarmTriggeredActivity extends AppCompatActivity {
                 playAudio("9_21_clk.mp3");
                 break;
             case 10:
+            case 22:
                 playAudio("10_clk.mp3");
             case 11:
                 playAudio("11_clk.mp3");

@@ -15,7 +15,7 @@ public class AlarmReceiver extends WakefulBroadcastReceiver {
 
         int hourOfTheDay = calendar.get(Calendar.HOUR_OF_DAY);
 
-        if(hourOfTheDay<22 && hourOfTheDay>3){
+        if(hourOfTheDay<23 && hourOfTheDay>4){
             Intent i = new Intent(context, AlarmTriggeredActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             i.addFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK);

@@ -163,7 +163,7 @@
                     android:layout_marginLeft="5dp"
                     android:textSize="16dp"
                     android:textColor="@color/background_main"
-                    android:text="Vruddh aashram mein rehne wale ko hur suvidha pardaan karna."
+                    android:text="Vruddh aashram me rehne wale ko hur suvidha pardaan karna."
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />
 
